@@ -94,6 +94,37 @@ nav{
   display: none;
 }
 
+.header__container{
+  max-width: var(--max-width);
+  margin: auto;
+  padding-block: 8rem 2rem;
+  padding-inline: 1rem;
+  display: grid;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+
+.header__image{
+  position: relative;
+  isolation: isolate;
+}
+
+.header__image::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  aspect-ratio: 1;
+  background-image: url(assets/header-bg.png);
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
 @media(width > 768px){
   nav{
     position: static;
